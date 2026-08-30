@@ -1,0 +1,31 @@
+{
+  "sql_injection": {
+    "severity": "high",
+    "patterns": [
+      "' OR 1=1",
+      "UNION SELECT",
+      "SELECT * FROM",
+      "DROP TABLE",
+      "' OR '1'='1"
+    ]
+  },
+  "xss": {
+    "severity": "high",
+    "patterns": [
+      "<script>",
+      "</script>",
+      "javascript:",
+      "onerror=",
+      "onload="
+    ]
+  },
+  "directory_traversal": {
+    "severity": "high",
+    "patterns": [
+      "../",
+      "..\\",
+      "/etc/passwd",
+      "/etc/shadow"
+    ]
+  }
+}
